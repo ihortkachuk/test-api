@@ -3,51 +3,16 @@ layout:
 title: Typography
 tags: Testing, markup
 author: Ihor Tkachuk
-date: 17-03-17 18:29
+date: 2017-03-17 18:29:00
 ---
-# Header 1
-## Header 2
-### Header 3
-#### Header 4 
-
-**bold**
-
-*italic*
-
-```
-function checkAge(age) {
-  if (age > 18) {
-    return true;
-  } else {
-    return confirm('Родители разрешили?');
-  }
-}
-
-var age = prompt('Ваш возраст?');
-
-if (checkAge(age)) {
-  alert( 'Доступ разрешен' );
-} else {
-  alert( 'В доступе отказано' );
-}
-```
-
-> dfdsfsdfsdfsdfsdf dsfsdfsdf
- 
-* asasfasf
-* asfasfasf
-
-1. asdasdasdas
-2. as
-3. d
-4. asdasd
-
-
-
-
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
+|
 | Text     | Text     | Text     |
+
+1. sdfsdf
+2. s
+3. df
+4. sdf
+5. sdf
 
 
 [link](http://google.com)
