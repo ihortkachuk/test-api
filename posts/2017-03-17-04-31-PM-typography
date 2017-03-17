@@ -1,0 +1,53 @@
+---
+layout:
+title: Typography
+tags: Testing, markup
+author: Ihor Tkachuk
+date: 17-03-17 18:29
+---
+# Header 1
+## Header 2
+### Header 3
+#### Header 4 
+
+**bold**
+
+*italic*
+
+```
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Родители разрешили?');
+  }
+}
+
+var age = prompt('Ваш возраст?');
+
+if (checkAge(age)) {
+  alert( 'Доступ разрешен' );
+} else {
+  alert( 'В доступе отказано' );
+}
+```
+
+> dfdsfsdfsdfsdfsdf dsfsdfsdf
+ 
+* asasfasf
+* asfasfasf
+
+1. asdasdasdas
+2. as
+3. d
+4. asdasd
+
+
+
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Text     | Text     | Text     |
+
+
+[link](http://google.com)
