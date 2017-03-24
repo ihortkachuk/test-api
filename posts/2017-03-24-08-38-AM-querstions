@@ -1,0 +1,18 @@
+---
+preview: 
+title: Вопросы
+tags: developer
+author: Ihor Tkachuk
+date: 17-03-24 10:36
+---
+## Вопросы:
+---
+1. refs как доступ к свойствам
+2. обработка ошибок
+3. name и repo в URL
+4. структура c index.ts
+5. innerHTML разметка
+6. Логгер ошибок
+7. Ветки в проекте
+8. localStorage в service
+9. service в template
