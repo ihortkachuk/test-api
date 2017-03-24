@@ -1,11 +1,9 @@
 ---
-preview: 
+preview: No Preview
 title: Вопросы
 tags: developer
 author: Ihor Tkachuk
-date: 17-03-24 10:36
----
-## Вопросы:
+date: 2017-03-24 10:36:00
 ---
 1. refs как доступ к свойствам
 2. обработка ошибок
