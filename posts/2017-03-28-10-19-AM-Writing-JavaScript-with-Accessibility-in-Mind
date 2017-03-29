@@ -31,7 +31,7 @@ Elements like `<p>`, `<h2>` or `<div>` cannot be focused by default. We often us
 ### Making non-focusable elements focusable
 It’s possible to make non-focusable elements focusable by adding the tabindex attribute with an integer value. If the value is set to 0 the element becomes focusable and reachable via keyboard. If the value is a negative number, the element is programatically focusable (e.g. with JavaScript), but not reachable via keyboard. You can also use a value greater than 0, but that changes the natural tab order and is considered an anti-pattern.
 
-```
+```html
 <h2 tabindex="0">A focusable heading</h2>
 ```
 
@@ -44,7 +44,7 @@ If you use the Tab key to jump to the button and press Enter, a modal window wil
 
 To fix that you have to make the modal window focusable and then focus it with JavaScript.
 
-```
+```html
 <div class="modal" id="modal2" tabindex="0">
   ...
 </div>
@@ -65,7 +65,7 @@ If you close the modal window by pressing Esc the focus is lost. Ideally, the fo
 
 We can use document.activeElement to get the current element in focus.
 
-```
+```javascript
 var lastFocusedElement;
 
 function showModal() {
@@ -79,7 +79,7 @@ function showModal() {
 
 Now that you have a reference to the button you can focus it again when the modal window is closed.
 
-```
+```javascript
 function removeModal() {
   ...
   lastFocusedElement.focus();
