@@ -2,7 +2,7 @@
 preview: undefined
 title: Writing JavaScript with Accessibility in Mind
 tags: javascript
-author: Ihor Tkachuk
+author: ihortkachuk
 date: 2017-03-28 13:12:00
 ---
 In my first post Writing HTML with accessibility in mind I explained why and how I got started with web accessibility. I also shared some tips on how you can improve your markup in order to make your websites more accessible. Some of these were pretty basic but nevertheless valuable. It all boils down to two of the most important unwritten rules in front-end development: Learn the basics and take enough time to plan and write HTML. Both you and your users will benefit from clean and semantic markup.
