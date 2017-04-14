@@ -1,8 +1,8 @@
 ---
 preview: test prev
 title: test post
-tags: tag, tag2
+tags: tag, tag2, -----post-locked-by:Acid-base
 author: Acid-base
-date: 17-04-14 09:10
+date: 2017-04-14 09:10:00
 ---
 test text
