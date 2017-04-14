@@ -1,8 +1,8 @@
 ---
-preview: test prev (edit)
+preview: test prev (edit) test
 title: test post (edit)
-tags: tag, tag2, tag(edit), -----post-locked-by:ihortkachuk
-author: Acid-base
+tags: tag, tag2, tag(edit)
+author: Acid-base, ihortkachuk
 date: 2017-04-14 09:10:00
 ---
 test text
