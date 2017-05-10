@@ -1,0 +1,89 @@
+---
+preview: JavaScript is one if not the most popular programming language in the world. Found in web pages, software, mobile apps, console applications, etc.
+
+JavaScript is everywhere and it is definitely here to stay. The problem with this language is with its rise, a lot of applications that use it feel "janky" (slow). We are here today to try and optimize (reduce jank in) our JavaScript applications.
+title: Improve the Performance of your JavaScript Web Application
+tags: javascript
+author: ihortkachuk
+date: 17-05-10 22:36
+---
+![](https://cdn.scotch.io/1/9MbWMWERWuHEK77KihAQ_improve-the-javascript-performance-of-your-web-application.png.jpg)
+
+## Throttling & Debounce
+When we add event listeners to user actions like a scroll, we ignore the fact that listener(s) fire when our events get triggered. This is a potential bottleneck for our JavaScript application.
+
+Take the scroll event for example, when we do something like this
+
+```javascript
+function scrollHandler() {
+    return console.log('yippeeeee');
+}
+
+window.addEventListener('scroll', scrollHandler());
+```
+
+Everytime a user scrolls, "yippeeeee" gets logged to the console.
+
+This doesn't seem bad, but with more expensive operations like checking if an element is in the viewport so we can animate, this becomes expensive with time and uses more memory.
+
+A simple way to fix this is to either `debounce` or `throttle` the `scrollHandler` function. Wait, what?
+
+It sounds complicated, but:
+
+> Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in "execute this function only if 100 milliseconds have passed without it being called."
+
+while
+
+> Throttling enforces a maximum number of times a function can be called over time. As in "execute this function at most once every 100 milliseconds."
+
+A quick example, using Lodash to debounce our application is
+
+```javascript
+window.addEventListener('scroll', _.debounce(scrollHandler, 300));
+
+// or
+
+window.addEventListener('scroll', _.throttle(scrollHandler, 300));
+```
+
+Another library I'll recommend is Underscore. You can either use one of the libraries above or you can rip the functions out of the codebase and add to yours.
+
+## Switch to HTTP/2 and don't bundle
+HTTP/2 is beginning to rise and unlike before where the best advice we got when serving JavaScript files was to combine our files into a large bundle, now we don't need to do that anymore.
+
+HTTP/2 is multiplexed meaning that it's built to handle many file requests in a more optimal form. HTTP/2 can use one TCP connection to request many files unlike HTTP/1 where we had separate connections for each request. This makes HTTP/2 a lot faster when compared to HTTP/1 where we could only request files one at a time.
+
+Thus serving up many files is now a good thing, as long as you are using HTTP/2. But not too much (too much of anything is bad).
+
+## Trim the fat
+If you use NPM to install dependencies, then you have a lot of junk in your build file. From a meme of Guy Fieri to localization files you "may" use.
+
+Instead of including the entire codebase to use a part of it, just include what you need. Take Lodash for example, it comes with a lot of functions we may use, instead of keeping what we "may" use, why not require what we want.
+
+Like this:
+
+```javascript
+// Load the full build.
+var _ = require('lodash');
+
+// Load only the array helper.
+var arr = require('lodash/array');
+
+// Load only the debounce function.
+var debounce = require('lodash/debounce');
+```
+
+Doing this will reduce file size and speed up parsing by the browser.
+
+## Minify
+This has been one of most talked about JavaScript optimization technique ever.
+
+> Minification refers to the removal of unwanted/cumbersome elements from our JavaScript source.
+
+Unwanted refers to comments, semi-colons, whitespace etc. While cumbersome refers to shortening function and variable names, reducing an if-else into ternary etc.
+
+We can achieve minification with build tools like UglifyJs, Google Closure compiler or online tools like JS Compress, JS minifier etc.
+
+...
+
+[[Source](https://scotch.io/tutorials/improve-the-performance-of-your-javascript-web-application)]
