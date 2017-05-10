@@ -2,7 +2,7 @@
 preview: JavaScript is one if not the most popular programming language in the world. Found in web pages, software, mobile apps, console applications, etc.
 JavaScript is everywhere and it is definitely here to stay. The problem with this language is with its rise, a lot of applications that use it feel "janky" (slow). We are here today to try and optimize (reduce jank in) our JavaScript applications.
 title: Improve the Performance of your JavaScript Web Application
-tags: javascript, -----post-locked-by:ihortkachuk
+tags: javascript
 author: ihortkachuk
 date: 2017-05-10 22:36:00
 ---
@@ -62,13 +62,13 @@ Instead of including the entire codebase to use a part of it, just include what 
 Like this:
 
 ```javascript
-// Load the full build.
+//Load the full build.
 var _ = require('lodash');
 
-// Load only the array helper.
+//Load only the array helper.
 var arr = require('lodash/array');
 
-// Load only the debounce function.
+//Load only the debounce function.
 var debounce = require('lodash/debounce');
 ```
 
